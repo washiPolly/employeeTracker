@@ -11,7 +11,7 @@ start();
 function start() {
     inquirer.prompt([{
             type: "list",
-            name: "choices",
+            name: "action",
             message: "What would you like to do? (Use arrow keys)",
             choices: 
             [
@@ -182,7 +182,7 @@ function updateManager(){
 
 async function allEmployees(){
         const viewEmp = await data.viewEmployees();
-        console.log(viewEmp);
+        console.table(viewEmp);
         start();
     }
 
